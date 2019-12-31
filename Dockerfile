@@ -4,6 +4,8 @@ MAINTAINER Bono Lv <lvscar  {aT} gmail.com>
 # Working enviroment
 ENV \
     CNPM_DIR="/var/app/cnpmjs.org" \
+    APP_ID="83245" \
+    APP_SECRET="18db43282562bae9d0a76fb29efcea39c5c71fae" \
     CNPM_DATA_DIR="/var/data/cnpm_data"
 
 RUN mkdir  -p ${CNPM_DIR}
@@ -11,8 +13,6 @@ RUN mkdir  -p ${CNPM_DIR}
 WORKDIR ${CNPM_DIR}
 
 COPY package.json ${CNPM_DIR}
-
-COPY ./app-config.json /root/
 
 RUN npm set registry https://registry.npm.taobao.org
 
