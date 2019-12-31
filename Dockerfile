@@ -12,7 +12,7 @@ WORKDIR ${CNPM_DIR}
 
 COPY package.json ${CNPM_DIR}
 
-COPY ./app-config.json ${CNPM_DIR}
+COPY ./app-config.json /root/
 
 RUN npm set registry https://registry.npm.taobao.org
 
