@@ -1,16 +1,18 @@
-FROM node:12
+FROM registry.cn-hangzhou.aliyuncs.com/aliyun-node/alinode:5.13.0-alpine
 MAINTAINER Bono Lv <lvscar  {aT} gmail.com>
 
 # Working enviroment
 ENV \
     CNPM_DIR="/var/app/cnpmjs.org" \
-    CNPM_DATA_DIR="/var/data/cnpm_data" 
+    CNPM_DATA_DIR="/var/data/cnpm_data"
 
 RUN mkdir  -p ${CNPM_DIR}
 
 WORKDIR ${CNPM_DIR}
 
 COPY package.json ${CNPM_DIR}
+
+COPY ./app-config.json ${CNPM_DIR}
 
 RUN npm set registry https://registry.npm.taobao.org
 
