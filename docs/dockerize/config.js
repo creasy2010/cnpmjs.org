@@ -147,7 +147,7 @@ var config = {
   enablePrivate: false,
 
   // registry scopes, if don't set, means do not support scopes
-  scopes: [ '@cnpm', '@cnpmtest', '@cnpm-test' ],
+  scopes: [ '@yzf'],
 
   // some registry already have some private packages in global scope
   // but we want to treat them as scoped private packages,
