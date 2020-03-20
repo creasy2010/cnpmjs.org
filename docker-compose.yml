@@ -21,7 +21,7 @@ services:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
       MYSQL_DATABASE: cnpmjs_test
       MYSQL_ROOT_HOST: "%"
-  ports:
+    ports:
         - "3306:3306"
     volumes:
       - ./docs/db.sql:/docker-entrypoint-initdb.d/cnpm-init.sql
